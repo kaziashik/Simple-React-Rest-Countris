@@ -24,6 +24,20 @@ function Countries() {
     <div>
       <h2>Traveling around the world!!</h2>
       <h4>Countries Available:{countries.length}</h4>
+      {
+        countries.map(country => <Country name={country.name} capital={country.capital}>
+
+        </Country>)
+      }
+    </div>
+  )
+}
+
+function Country(props) {
+  return (
+    <div>
+      <h2> Name:{props.name}</h2>
+      <p>Capita;:{props.capital}</p>
     </div>
   )
 }
