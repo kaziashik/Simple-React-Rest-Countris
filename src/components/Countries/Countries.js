@@ -12,10 +12,16 @@ const Countries = () => {
     }, [])
     return (
         <div>
-            <h1>hello from Countries:{countries.length}</h1>
+            <h1>Number of Countries :{countries.length}</h1>
 
             {
-                countries.map(country => <Country name={country.name.common} capital={country.capital} population={country.population}></Country>)
+                countries.map(country => console.log(country))
+            }
+
+
+            {
+                countries.map(country => <Country country={country}>
+             </Country>)
             }
         </div>
     );
